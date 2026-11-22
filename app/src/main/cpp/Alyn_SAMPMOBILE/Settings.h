@@ -41,6 +41,9 @@ public:
 	static float fontsize() { return m_fontsize; }
 	static ImVec2 chatpos() { return m_chatpos; }
 	static ImVec2 chatsize() { return m_chatsize; }
+	static ImVec2 buttonpanelpos() { return m_buttonpanelpos; }
+	static ImVec2 buttonvoicepos() { return m_buttonvoicepos; }
+	static ImVec2 spawnpos() { return m_spawnpos; }
 
 private:
 	static bool m_initialized;
@@ -64,4 +67,7 @@ private:
 	static float m_fontsize;
 	static ImVec2 m_chatpos;
 	static ImVec2 m_chatsize;
+	static ImVec2 m_buttonpanelpos;
+	static ImVec2 m_buttonvoicepos;
+	static ImVec2 m_spawnpos;
 };
