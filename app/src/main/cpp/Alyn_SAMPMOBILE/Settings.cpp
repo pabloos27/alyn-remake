@@ -25,6 +25,9 @@ int Settings::m_chatstrings = 5;
 float Settings::m_fontsize = 26.0f;
 ImVec2 Settings::m_chatpos = ImVec2(100.0f, 10.0f);
 ImVec2 Settings::m_chatsize = ImVec2(400.0f, 150.0f);
+ImVec2 Settings::m_buttonpanelpos = ImVec2(5.0f, 170.0f);
+ImVec2 Settings::m_buttonvoicepos = ImVec2(480.0f, 270.0f);
+ImVec2 Settings::m_spawnpos = ImVec2(200.0f, 420.0f);
 
 void Settings::initialize()
 {
@@ -75,6 +78,15 @@ void Settings::initialize()
 	m_chatpos.y = settings_json["client"]["settings"]["chat_posy"].GetInt();
 	m_chatsize.x = settings_json["client"]["settings"]["chat_sizex"].GetInt();
 	m_chatsize.y = settings_json["client"]["settings"]["chat_sizey"].GetInt();
+
+	// Optional HUD positions keep older settings.json files compatible.
+	const auto& clientSettings = settings_json["client"]["settings"];
+	if (clientSettings.HasMember("buttonpanel_posx") && clientSettings["buttonpanel_posx"].IsInt()) m_buttonpanelpos.x = static_cast<float>(clientSettings["buttonpanel_posx"].GetInt());
+	if (clientSettings.HasMember("buttonpanel_posy") && clientSettings["buttonpanel_posy"].IsInt()) m_buttonpanelpos.y = static_cast<float>(clientSettings["buttonpanel_posy"].GetInt());
+	if (clientSettings.HasMember("buttonvoice_posx") && clientSettings["buttonvoice_posx"].IsInt()) m_buttonvoicepos.x = static_cast<float>(clientSettings["buttonvoice_posx"].GetInt());
+	if (clientSettings.HasMember("buttonvoice_posy") && clientSettings["buttonvoice_posy"].IsInt()) m_buttonvoicepos.y = static_cast<float>(clientSettings["buttonvoice_posy"].GetInt());
+	if (clientSettings.HasMember("spawn_posx") && clientSettings["spawn_posx"].IsInt()) m_spawnpos.x = static_cast<float>(clientSettings["spawn_posx"].GetInt());
+	if (clientSettings.HasMember("spawn_posy") && clientSettings["spawn_posy"].IsInt()) m_spawnpos.y = static_cast<float>(clientSettings["spawn_posy"].GetInt());
 
 	spdlog::info("host {}", m_host);
 	spdlog::info("port {}", m_port);
