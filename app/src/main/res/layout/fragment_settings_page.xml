@@ -871,6 +871,222 @@
                     </com.google.android.material.textfield.TextInputLayout>
                 </RelativeLayout>
 
+                <!-- Button Panel Position -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/panelposIcon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/round_back_security"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/security_icon"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/panelposIcon"
+                        android:text="Button Panel Position"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/panelposx_layout"
+                        style="?attr/textInputStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/panelposy_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/panelposx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890"
+                            android:hint="X"
+                            android:maxLength="4"
+                            android:padding="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:text="5"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/panelposy_layout"
+                        style="?attr/textInputStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/panelposy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890"
+                            android:hint="Y"
+                            android:maxLength="4"
+                            android:padding="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:text="170"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <!-- Voice Button Position -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/voiceposIcon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/round_back_security"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/security_icon"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/voiceposIcon"
+                        android:text="Voice Button Position"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/voiceposx_layout"
+                        style="?attr/textInputStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/voiceposy_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/voiceposx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890"
+                            android:hint="X"
+                            android:maxLength="4"
+                            android:padding="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:text="480"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/voiceposy_layout"
+                        style="?attr/textInputStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/voiceposy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890"
+                            android:hint="Y"
+                            android:maxLength="4"
+                            android:padding="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:text="270"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <!-- Spawn Button Position -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/spawnposIcon"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/round_back_security"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/security_icon"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_toEndOf="@+id/spawnposIcon"
+                        android:text="Spawn Button Position"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/spawnposx_layout"
+                        style="?attr/textInputStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/spawnposy_layout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/spawnposx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890"
+                            android:hint="X"
+                            android:maxLength="4"
+                            android:padding="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:text="200"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/spawnposy_layout"
+                        style="?attr/textInputStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/spawnposy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="1234567890"
+                            android:hint="Y"
+                            android:maxLength="4"
+                            android:padding="@dimen/_7sdp"
+                            android:singleLine="true"
+                            android:text="420"
+                            android:textSize="@dimen/_11ssp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
                 <!-- Chat Size -->
                 <RelativeLayout
                     android:layout_width="match_parent"
