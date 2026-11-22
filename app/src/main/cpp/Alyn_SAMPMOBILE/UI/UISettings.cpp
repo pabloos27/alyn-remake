@@ -106,6 +106,7 @@ void UISettings::Initialize(const ImVec2& display_size)
 	/* spawn */
 	m_spawnPos = Settings::spawnpos();
 	m_spawnPos = m_spawnPos * m_scaleFactor;
+	m_spawnSize = Settings::spawnsize();
 	m_spawnSize = m_spawnSize * m_scaleFactor;
 
 	/* nametag */
@@ -121,11 +122,13 @@ void UISettings::Initialize(const ImVec2& display_size)
 	/* buttonpanel */
 	m_buttonPanelPos = Settings::buttonpanelpos();
 	m_buttonPanelPos = m_buttonPanelPos * m_scaleFactor;
+	m_buttonPanelSize = Settings::buttonpanelsize();
 	m_buttonPanelSize = m_buttonPanelSize * m_scaleFactor;
 
 	/* button voice */
 	m_buttonVoicePos = Settings::buttonvoicepos();
 	m_buttonVoicePos = m_buttonVoicePos * m_scaleFactor;
+	m_buttonVoiceSize = Settings::buttonvoicesize();
 	m_buttonVoiceSize = m_buttonVoiceSize * m_scaleFactor;
 
 	/* scoreboard */
