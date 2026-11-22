@@ -41,6 +41,7 @@ public class SettingsPageFragment extends Fragment {
     private MaterialButton data_full, data_lite, restore_button;
     private MaterialButton chat_minus, chat_strings, chat_plus;
     private TextInputEditText chatposx, chatposy, chatsizex, chatsizey, fontsize;
+    private TextInputEditText panelposx, panelposy, voiceposx, voiceposy, spawnposx, spawnposy;
     private SharedPreferences settings_prefs;
 
     private LinearLayout mods_layout;
@@ -149,6 +150,12 @@ public class SettingsPageFragment extends Fragment {
         chatsizey = view.findViewById(R.id.chatsizey);
 
         fontsize = view.findViewById(R.id.fontsize);
+        panelposx = view.findViewById(R.id.panelposx);
+        panelposy = view.findViewById(R.id.panelposy);
+        voiceposx = view.findViewById(R.id.voiceposx);
+        voiceposy = view.findViewById(R.id.voiceposy);
+        spawnposx = view.findViewById(R.id.spawnposx);
+        spawnposy = view.findViewById(R.id.spawnposy);
     }
 
     private void setupListeners() {
@@ -275,6 +282,12 @@ public class SettingsPageFragment extends Fragment {
         setupTextWatcher(chatsizex, "chat_sizex", text -> text.isEmpty() ? 400 : Integer.parseInt(text));
         setupTextWatcher(chatsizey, "chat_sizey", text -> text.isEmpty() ? 150 : Integer.parseInt(text));
         setupTextWatcher(fontsize, "font_size", text -> text.isEmpty() ? 0.0f : Float.parseFloat(text));
+        setupTextWatcher(panelposx, "buttonpanel_posx", text -> text.isEmpty() ? 5 : Integer.parseInt(text));
+        setupTextWatcher(panelposy, "buttonpanel_posy", text -> text.isEmpty() ? 170 : Integer.parseInt(text));
+        setupTextWatcher(voiceposx, "buttonvoice_posx", text -> text.isEmpty() ? 480 : Integer.parseInt(text));
+        setupTextWatcher(voiceposy, "buttonvoice_posy", text -> text.isEmpty() ? 270 : Integer.parseInt(text));
+        setupTextWatcher(spawnposx, "spawn_posx", text -> text.isEmpty() ? 200 : Integer.parseInt(text));
+        setupTextWatcher(spawnposy, "spawn_posy", text -> text.isEmpty() ? 420 : Integer.parseInt(text));
     }
 
     private <T> void setupTextWatcher(TextInputEditText editText, String key, Function<String, T> parser) {
@@ -331,6 +344,12 @@ public class SettingsPageFragment extends Fragment {
         chatsizey.setText(String.valueOf(settings_prefs.getInt("chat_sizey", 150)));
 
         fontsize.setText(String.valueOf(settings_prefs.getFloat("font_size", 26.0f)));
+        panelposx.setText(String.valueOf(settings_prefs.getInt("buttonpanel_posx", 5)));
+        panelposy.setText(String.valueOf(settings_prefs.getInt("buttonpanel_posy", 170)));
+        voiceposx.setText(String.valueOf(settings_prefs.getInt("buttonvoice_posx", 480)));
+        voiceposy.setText(String.valueOf(settings_prefs.getInt("buttonvoice_posy", 270)));
+        spawnposx.setText(String.valueOf(settings_prefs.getInt("spawn_posx", 200)));
+        spawnposy.setText(String.valueOf(settings_prefs.getInt("spawn_posy", 420)));
     }
 
     private void savePreference(String key, Object value) {
