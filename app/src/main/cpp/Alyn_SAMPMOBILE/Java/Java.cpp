@@ -189,8 +189,11 @@ extern "C" JNIEXPORT void JNICALL Java_ro_alynsampmobile_game_SAMP_initializeSAM
 
 
 
-	Client::initialize(gameDirStr, isOffline);
+	// Create the Java bridge before installing game hooks. The render thread can
+	// enter Client::process() as soon as the hooks are active, so g_java must
+	// already be valid before Client::initialize() starts the client.
 	g_java = new Java(env, sampObj, uiObj);
+	Client::initialize(gameDirStr, isOffline);
 }
 
 extern "C" JNIEXPORT void JNICALL Java_ro_alynsampmobile_game_ui_UI_keyboardSend(JNIEnv* env, jobject obj, jbyteArray str)
