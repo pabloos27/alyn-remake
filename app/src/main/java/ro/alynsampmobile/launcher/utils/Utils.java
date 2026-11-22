@@ -394,6 +394,12 @@ public class Utils {
             jSONObject.getJSONObject("client").getJSONObject("settings").put("buttonvoice_posy", settings_prefs.getInt("buttonvoice_posy", 270));
             jSONObject.getJSONObject("client").getJSONObject("settings").put("spawn_posx", settings_prefs.getInt("spawn_posx", 200));
             jSONObject.getJSONObject("client").getJSONObject("settings").put("spawn_posy", settings_prefs.getInt("spawn_posy", 420));
+            jSONObject.getJSONObject("client").getJSONObject("settings").put("buttonpanel_sizex", settings_prefs.getInt("buttonpanel_sizex", 500));
+            jSONObject.getJSONObject("client").getJSONObject("settings").put("buttonpanel_sizey", settings_prefs.getInt("buttonpanel_sizey", 45));
+            jSONObject.getJSONObject("client").getJSONObject("settings").put("buttonvoice_sizex", settings_prefs.getInt("buttonvoice_sizex", 45));
+            jSONObject.getJSONObject("client").getJSONObject("settings").put("buttonvoice_sizey", settings_prefs.getInt("buttonvoice_sizey", 60));
+            jSONObject.getJSONObject("client").getJSONObject("settings").put("spawn_sizex", settings_prefs.getInt("spawn_sizex", 240));
+            jSONObject.getJSONObject("client").getJSONObject("settings").put("spawn_sizey", settings_prefs.getInt("spawn_sizey", 45));
             jSONObject.getJSONObject("client").getJSONObject("settings").put("font_size", settings_prefs.getFloat("font_size", 26.0f));
 
             file.createNewFile();
@@ -436,6 +442,12 @@ public class Utils {
         edit.putInt("buttonvoice_posy", 270);
         edit.putInt("spawn_posx", 200);
         edit.putInt("spawn_posy", 420);
+        edit.putInt("buttonpanel_sizex", 500);
+        edit.putInt("buttonpanel_sizey", 45);
+        edit.putInt("buttonvoice_sizex", 45);
+        edit.putInt("buttonvoice_sizey", 60);
+        edit.putInt("spawn_sizex", 240);
+        edit.putInt("spawn_sizey", 45);
         edit.putFloat("font_size", 26.0f);
         edit.apply();
 
