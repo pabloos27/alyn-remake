@@ -104,6 +104,7 @@ void UISettings::Initialize(const ImVec2& display_size)
 	m_chatItemSize = m_chatItemSize * m_scaleFactor;
 
 	/* spawn */
+	m_spawnPos = Settings::spawnpos();
 	m_spawnPos = m_spawnPos * m_scaleFactor;
 	m_spawnSize = m_spawnSize * m_scaleFactor;
 
@@ -118,10 +119,12 @@ void UISettings::Initialize(const ImVec2& display_size)
 	m_dialogListItemHeight *= m_scaleFactor.y;
 
 	/* buttonpanel */
+	m_buttonPanelPos = Settings::buttonpanelpos();
 	m_buttonPanelPos = m_buttonPanelPos * m_scaleFactor;
 	m_buttonPanelSize = m_buttonPanelSize * m_scaleFactor;
 
 	/* button voice */
+	m_buttonVoicePos = Settings::buttonvoicepos();
 	m_buttonVoicePos = m_buttonVoicePos * m_scaleFactor;
 	m_buttonVoiceSize = m_buttonVoiceSize * m_scaleFactor;
 
