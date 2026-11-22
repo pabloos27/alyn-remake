@@ -28,6 +28,9 @@ ImVec2 Settings::m_chatsize = ImVec2(400.0f, 150.0f);
 ImVec2 Settings::m_buttonpanelpos = ImVec2(5.0f, 170.0f);
 ImVec2 Settings::m_buttonvoicepos = ImVec2(480.0f, 270.0f);
 ImVec2 Settings::m_spawnpos = ImVec2(200.0f, 420.0f);
+ImVec2 Settings::m_buttonpanelsize = ImVec2(500.0f, 45.0f);
+ImVec2 Settings::m_buttonvoicesize = ImVec2(45.0f, 60.0f);
+ImVec2 Settings::m_spawnsize = ImVec2(240.0f, 45.0f);
 
 void Settings::initialize()
 {
@@ -87,6 +90,12 @@ void Settings::initialize()
 	if (clientSettings.HasMember("buttonvoice_posy") && clientSettings["buttonvoice_posy"].IsInt()) m_buttonvoicepos.y = static_cast<float>(clientSettings["buttonvoice_posy"].GetInt());
 	if (clientSettings.HasMember("spawn_posx") && clientSettings["spawn_posx"].IsInt()) m_spawnpos.x = static_cast<float>(clientSettings["spawn_posx"].GetInt());
 	if (clientSettings.HasMember("spawn_posy") && clientSettings["spawn_posy"].IsInt()) m_spawnpos.y = static_cast<float>(clientSettings["spawn_posy"].GetInt());
+	if (clientSettings.HasMember("buttonpanel_sizex") && clientSettings["buttonpanel_sizex"].IsInt()) m_buttonpanelsize.x = static_cast<float>(clientSettings["buttonpanel_sizex"].GetInt());
+	if (clientSettings.HasMember("buttonpanel_sizey") && clientSettings["buttonpanel_sizey"].IsInt()) m_buttonpanelsize.y = static_cast<float>(clientSettings["buttonpanel_sizey"].GetInt());
+	if (clientSettings.HasMember("buttonvoice_sizex") && clientSettings["buttonvoice_sizex"].IsInt()) m_buttonvoicesize.x = static_cast<float>(clientSettings["buttonvoice_sizex"].GetInt());
+	if (clientSettings.HasMember("buttonvoice_sizey") && clientSettings["buttonvoice_sizey"].IsInt()) m_buttonvoicesize.y = static_cast<float>(clientSettings["buttonvoice_sizey"].GetInt());
+	if (clientSettings.HasMember("spawn_sizex") && clientSettings["spawn_sizex"].IsInt()) m_spawnsize.x = static_cast<float>(clientSettings["spawn_sizex"].GetInt());
+	if (clientSettings.HasMember("spawn_sizey") && clientSettings["spawn_sizey"].IsInt()) m_spawnsize.y = static_cast<float>(clientSettings["spawn_sizey"].GetInt());
 
 	spdlog::info("host {}", m_host);
 	spdlog::info("port {}", m_port);
