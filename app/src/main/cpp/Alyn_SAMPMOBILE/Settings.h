@@ -44,6 +44,9 @@ public:
 	static ImVec2 buttonpanelpos() { return m_buttonpanelpos; }
 	static ImVec2 buttonvoicepos() { return m_buttonvoicepos; }
 	static ImVec2 spawnpos() { return m_spawnpos; }
+	static ImVec2 buttonpanelsize() { return m_buttonpanelsize; }
+	static ImVec2 buttonvoicesize() { return m_buttonvoicesize; }
+	static ImVec2 spawnsize() { return m_spawnsize; }
 
 private:
 	static bool m_initialized;
@@ -70,4 +73,7 @@ private:
 	static ImVec2 m_buttonpanelpos;
 	static ImVec2 m_buttonvoicepos;
 	static ImVec2 m_spawnpos;
+	static ImVec2 m_buttonpanelsize;
+	static ImVec2 m_buttonvoicesize;
+	static ImVec2 m_spawnsize;
 };
